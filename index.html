@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -26,7 +27,7 @@
         <div class="container">
             <h2>Bem-vindo ao meu portfólio!</h2>
             <p>Aqui compartilho um pouco sobre mim e meus projetos.</p>
-            <img src="sua-foto.jpg" alt="Foto de João Vítor" width="200">
+            <img src="IMAGE/FOTO_MINHA_CRIADA_POR_IA.png" alt="Foto de João Vítor criada por IA" width="300">
         </div>
     </section>
 
@@ -59,6 +60,23 @@
         <p>GitHub <a href="https://github.com/JoaoVitorOf">https://github.com/JoaoVitorOf</a></p>
         </div>
     </section>
+
+    <!-- Entre em contato -->
+    <section id="entre_em_contato">
+    <h2>Entre em Contato</h2>
+    <form action="mailto:seuemail@gmail.com" method="post" enctype="text/plain">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
 
     <!-- final -->
     <footer>
