@@ -31,14 +31,14 @@ Este site é responsivo, moderno e interativo, desenvolvido com **HTML, CSS e Ja
 ---
 
 ## 🌐 Acesse Online
-Confira o site funcionando [clicando aqui](https://SeuUsuario.github.io/nome-do-repositorio/)
+Confira o site funcionando [clicando aqui](https://github.com/JoaoVitorOf/meu-portfolio.git)
 
 ---
 
 ## 📫 Contato
 - ✉️ Email: seuemail@gmail.com  
-- 🔗 LinkedIn: [Seu LinkedIn](https://www.linkedin.com/in/seu-perfil/)  
-- 🐙 GitHub: [Seu GitHub](https://github.com/SeuUsuario)  
+- 🔗 LinkedIn: [Seu LinkedIn](https://www.linkedin.com/in/cer-jvt/)  
+- 🐙 GitHub: [Seu GitHub](https://github.com/JoaoVitorOf)  
 
 ---
 
