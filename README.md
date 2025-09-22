@@ -36,9 +36,9 @@ Confira o site funcionando [clicando aqui](https://github.com/JoaoVitorOf/meu-po
 ---
 
 ## 📫 Contato
-- ✉️ Email: seuemail@gmail.com  
-- 🔗 LinkedIn: [Seu LinkedIn](https://www.linkedin.com/in/cer-jvt/)  
-- 🐙 GitHub: [Seu GitHub](https://github.com/JoaoVitorOf)  
+- ✉️ Email: cer.jvt@gmail.com
+- 🔗 LinkedIn: [LinkedIn](https://www.linkedin.com/in/cer-jvt/)  
+- 🐙 GitHub: [GitHub](https://github.com/JoaoVitorOf)  
 
 ---
 
@@ -46,4 +46,4 @@ Confira o site funcionando [clicando aqui](https://github.com/JoaoVitorOf/meu-po
 Se quiser clonar e testar localmente:  
 
 ```bash
-git clone https://github.com/SeuUsuario/nome-do-repositorio.git
+git clone https://github.com/JoaoVitorOf/meu-portfolio.git
