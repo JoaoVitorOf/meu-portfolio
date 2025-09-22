@@ -24,11 +24,14 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
 }
 
 header h1 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #00adb5;
+  letter-spacing: 1px;
 }
 
 nav a {
@@ -36,11 +39,24 @@ nav a {
   margin-left: 25px;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: 0.3s;
+  position: relative;
 }
 
-nav a:hover {
-  color: #00adb5;
+nav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #00adb5;
+  transition: width 0.3s;
+  width: 0;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* Hero (Início) */
@@ -59,28 +75,32 @@ nav a:hover {
   font-size: 3rem;
   margin-bottom: 20px;
   color: #00adb5;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
 #inicio p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   max-width: 600px;
   margin-bottom: 30px;
+  color: #ccc;
 }
 
 #inicio button {
-  padding: 12px 25px;
+  padding: 14px 30px;
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   background: #00adb5;
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 173, 181, 0.4);
 }
 
 #inicio button:hover {
   transform: scale(1.05);
   background: #06c4cc;
+  box-shadow: 0 6px 20px rgba(0, 173, 181, 0.6);
 }
 
 /* Seções */
@@ -93,6 +113,17 @@ h2 {
   margin-bottom: 40px;
   font-size: 2.2rem;
   color: #00adb5;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00adb5;
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 p {
@@ -116,80 +147,95 @@ p {
   padding: 30px;
   border-radius: 15px;
   width: 250px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.4s, background 0.3s, box-shadow 0.3s;
 }
 
 #projetos li:hover {
   transform: translateY(-10px);
   background: #222;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
 }
 
-/* Contato */
+/* Contato / Links */
 #contato a {
   display: inline-block;
   margin: 10px;
   color: #00adb5;
   font-weight: bold;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s;
 }
 
 #contato a:hover {
   color: #06c4cc;
+  transform: scale(1.05);
 }
 
-
-/* Entre em contato */
+/* Formulário de contato */
 #entre_em_contato {
-    padding: 50px;
-    text-align: center;
-    background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+  background: #1a1a1a;
+  border-radius: 15px;
 }
 
 #entre_em_contato h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #00adb5;
 }
 
 form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 label {
-    font-weight: bold;
-    text-align: left;
+  font-weight: bold;
+  text-align: left;
+  color: #ccc;
 }
 
 input, textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
+  padding: 14px;
+  border: 1px solid #333;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #0f0f0f;
+  color: #fff;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #00adb5;
+  box-shadow: 0 0 8px #00adb5;
+  outline: none;
 }
 
 button {
-    padding: 12px;
-    background: #0077ff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
+  padding: 14px;
+  background: #00adb5;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 button:hover {
-    background: #005bb5;
+  background: #06c4cc;
+  transform: scale(1.03);
 }
 
+/* Placeholder */
 ::placeholder {
-    color: #999;
-    font-style: italic;
+  color: #999;
+  font-style: italic;
 }
 
 /* Rodapé */
@@ -197,7 +243,7 @@ footer {
   background: #0f0f0f;
   color: #777;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   margin-top: 50px;
 }
 
@@ -221,7 +267,52 @@ footer {
     align-items: center;
   }
 
-  #projetos li {
+  #projetos li, #entre_em_contato form {
     width: 90%;
   }
+}
+
+/* Fade-in das seções */
+
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animação dos projetos */
+
+#projetos li {
+  transition: transform 0.4s, background 0.3s, box-shadow 0.3s;
+}
+
+#projetos li:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+}
+
+/*Voltar ao topo*/
+#topo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 50%;
+  background: #00adb5;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 15px rgba(0,173,181,0.4);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+#topo:hover {
+  transform: scale(1.1);
 }
